@@ -4,15 +4,11 @@
 
 .PHONY: all clean
 
-all: ndev.com
+all: D.com
 
-ndev.com:
-	mads src/ndev.s -l:ndev.lst -o:ndev.com
-
-dist: ndev.com
-	cp ndev.com dist/AUTORUN.SYS
-	dir2atr -S -b DosXL230 n-handler.atr dist
+D.com:
+	mads src/D.s -l:D.lst -o:D.com
 
 clean:
-	rm -rf ndev* dist/AUTORUN.SYS n-handler.atr
+	rm -rf D*
 
