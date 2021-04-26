@@ -1,9 +1,9 @@
-CPADR	=	$10
-DEFDEV	=	CPADR+7
+CPADR	=	$0A		; CP origin
 	
 	ORG $4000
 
-	LDA	#'D
-	STA	DEFDEV
+	LDY	#$07		; Default device
+	LDA	#'D'
+	STA	(CPADR),Y
 	RTS
 	
